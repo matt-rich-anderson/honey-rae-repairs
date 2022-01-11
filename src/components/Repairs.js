@@ -1,22 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
+import { CustomerList } from "./customers/CustomerList";
+import { EmployeeList } from "./employees/EmployeeList";
 
 
 export const HoneyRaeRepairs = () => {
-    const [customers, setCustomers] = useState([])
-    
-    useEffect(
-        () => {
-            fetch("http://localhost:8088/customers")
-                .then(res => res.json())
-                .then((customerArray) => {
-                    setCustomers(customerArray)
-                })
-        },
-        []
-    )
-    
     return (
+        <>
         <h1>Honey Rae's Repair</h1>
+        <h2>Customer List</h2>
+        <CustomerList />
+        <h2>Employee List</h2>
+        <EmployeeList />
+        </>
     )
 }
 
