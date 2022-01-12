@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { HoneyRaeRepairs } from './components/Repairs';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HoneyRaeRepairs />
+    <BrowserRouter>
+      <HoneyRaeRepairs />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

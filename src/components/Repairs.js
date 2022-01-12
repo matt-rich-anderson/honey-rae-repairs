@@ -1,19 +1,13 @@
 import React from "react";
-import { CustomerList } from "./customers/CustomerList";
-import { EmployeeList } from "./employees/EmployeeList";
-import { TicketList } from "./tickets/TicketList";
-
+import { ApplicationViews } from "./ApplicationViews";
+import { NavBar } from "./nav/NavBar";
 
 export const HoneyRaeRepairs = () => {
     return (
         <>
+        <NavBar />
         <h1>Honey Rae's Repair</h1>
-        <h2>Customer List</h2>
-        <CustomerList />
-        <h2>Employee List</h2>
-        <EmployeeList />
-        <h2>Ticket List</h2>
-        <TicketList />
+        <ApplicationViews />
         </>
     )
 }
