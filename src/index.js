@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { HoneyRaeRepairs } from './components/Repairs';
+import { Repairs } from './components/Repairs';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <HoneyRaeRepairs />
+      <Repairs />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
