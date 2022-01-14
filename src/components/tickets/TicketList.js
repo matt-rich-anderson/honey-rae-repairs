@@ -21,9 +21,9 @@ export const TicketList = () => {
         <>
             <button onClick = {()=>history.push("/ticketform")}>Create Ticket</button>
             {tickets.map( (ticket) => {
-                        return <p key={`ticket--${ticket.id}`}>
-                            "{ticket.description}" submitted by {ticket.customer.name}, worked on by {ticket.employee.name}
-                        </p>
+                        return <p className={ticket.emergency ? `emergency`:`ticket`}>
+                        {ticket.emergency ? "🚑" : ""} {ticket.description} submitted by {ticket.customer.name} and worked on by {ticket.employee.name}
+                    </p>
                     }
                 )    
             }
