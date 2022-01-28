@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export const EmployeeList = () => {
     const [employees, changeEmployee] = useState([])
@@ -22,7 +23,7 @@ export const EmployeeList = () => {
             {
                 employees.map(
                     (employee) => {
-                        return <p key={`employee--${employee.id}`}>{employee.name}</p>
+                        return <p key={`employee--${employee.id}`}><Link to={`/employees/${employee.id}`}>{employee.name}</Link></p>
                     }
                 )
             }

@@ -1,8 +1,10 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { CustomerList } from "./customers/CustomerList"
+import { Employee } from "./employees/Employee"
 import { EmployeeList } from "./employees/EmployeeList"
-import { TicketForm } from "./ticketForm/TicketForm"
+import { Ticket } from "./tickets/Ticket"
+import { TicketForm } from "./tickets/TicketForm"
 import { TicketList } from "./tickets/TicketList"
 
 export const ApplicationViews = () => {
@@ -11,13 +13,19 @@ export const ApplicationViews = () => {
             <Route path="/customers">
                 <CustomerList />
             </Route>
-            <Route path="/employees">
+            <Route exact path="/employees">
                 <EmployeeList />
             </Route>
-            <Route path="/tickets">
+            <Route exact path="/employees/:employeeId(\d+)">
+                <Employee />
+            </Route>
+            <Route exact path="/tickets">
                 <TicketList />
             </Route>
-            <Route path="/ticketform">
+            <Route exact path="/tickets/:ticketId(\d+)">
+                <Ticket />
+            </Route>
+            <Route path="/tickets/create">
                 <TicketForm />
             </Route>
         </>
